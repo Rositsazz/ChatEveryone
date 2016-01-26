@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Everyone</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/sockets.js"></script>
+</head>
+<body>
+    <div class="chat" >
+        <h3>Welcome <%= username %></h3>
+        <div class="chat-window-container">
+            <div id="chat-window">
+            </div>
+        </div>
+        <div class="chat-send-container">
+            <form id="chat-send" action="#">
+                <input name="chatmessage" id="chat-input" />
+            </form>
+            <button id="chat-send-button" >
+                <div>S</div>
+                <div>E</div>
+                <div>N</div>
+                <div>D</div>
+            </button>
+        </div>
+    </div>
+    <script>
+        window.username = "<%= username %>";
+    </script>
+</body>
+</html>
