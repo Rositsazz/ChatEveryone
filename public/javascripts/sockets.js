@@ -1,12 +1,12 @@
 (function () {
 	$(document).ready(function(){
 		var socket = io.connect();
+		// socket listens to event connected 
 		socket.on('connected', function () {
-		  socket.emit('handshake', {name:window.username});
+		  socket.emit('handshake', {name:window.username}); // gives this to the server
 		});
 
 		socket.on('joined', function(data){
-			console.log(data);
 			$("#chat-window").append("<div align='center'>" + data.name + " has joined the chat.</div>");
 			$(".chat-window-container").scrollTop($("#chat-window").height());
 		})

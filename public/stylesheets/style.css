@@ -1,5 +1,4 @@
 body {
-  	padding: 50px;
   	font-family: Arial;
   	text-align: center;
 }
@@ -20,8 +19,8 @@ a:visited{
 
 .home-background{
 	opacity:0.6;
-	background:url(/images/bg.png);
-	background-size:100%;
+	background:url(/images/background.jpg);
+	background-size:cover;
 	position:fixed;
 	left:0;
 	top:0;
@@ -35,10 +34,16 @@ a:visited{
 	width:440px;
 	margin-left:auto;
 	margin-right:auto;
-	height:280px;
+	height:310px;
 	position:relative;
-}
 
+}
+@media screen and (max-width: 768px) {
+	.signin-container{
+		border-radius:0;
+		width:100%;
+	}
+}
 .signin-background{
 	position:absolute;
 	border-radius:20px;
@@ -54,18 +59,26 @@ a:visited{
 .signin-input{
 	height:100%;
 	text-align: center;
-	padding:40px;
+	padding:10px;
 }
 
 .signin-input h1{
 	font-size: 50px;
+  font-family: Indie Flower;
 	color:#7583D0;
 	border-bottom:1px solid #7583D0;
-	padding-bottom:20px;
+	padding-bottom:15px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 768px) {
+	.signin-input h1{
+		font-size:20px;
+	}
 }
 
 .signin-input input{
 	padding:10px 15px;
+  width: 50%;
 	border-radius:5px;
 	border:1px solid #7583D0;
 }
@@ -74,7 +87,23 @@ a:visited{
 	background-color:#7583D0;
 	color:white;
 	font-weight: bold;
+  font-family: Indie Flower;
+  padding-bottom: 5px;
 }
+
+#signin-username{
+  font-family: Indie Flower;
+  color:#7583D0;
+  font-weight: bold;
+}
+
+#signin-password{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: Indie Flower;
+  color:#7583D0;
+}
+
 
 .chat-window-container{
 	height: 500px;
@@ -82,6 +111,24 @@ a:visited{
 	border:1px solid #7583D0;
 	border-radius: 10px;
 	overflow-y:scroll;
+	position: relative;
+}
+
+@media screen and (max-width: 768px) {
+	.chat-window-container{
+		width:100%;
+	}
+}
+
+.chat-background {
+	position: absolute;
+	background:url(/images/minion.jpg) center no-repeat;
+	opacity: 0.4;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
 #chat-input{
@@ -92,6 +139,12 @@ a:visited{
 	border-radius: 10px;
 	padding-left:10px;
 	font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	#chat-input{
+		width:96%;
+	}
 }
 
 .chat-send-container{
@@ -111,7 +164,7 @@ a:visited{
 	color:white;
 	font-weight: bold;
 	padding-top:5px;
-	padding-bottom:5px;
+	padding-bottom:6px;
 	border-top-left-radius: 0px;
 	border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -132,6 +185,11 @@ a:visited{
 	margin-right:auto;
 	display:inline-block;
 	width:500px;
+}
+@media screen and (max-width: 768px) {
+	.chat{
+		width:96%;
+	}
 }
 
 .sender:after{

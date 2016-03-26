@@ -24,5 +24,18 @@ module.exports = function (server) {
 }
 
 function getDate(date){
-	return date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    // var hours = date.getHours();
+    // var minutes = date.getMinutes();
+    // var seconds = date.getSeconds();
+    // if (seconds < 10) {
+    //     seconds = "0" + seconds;
+    // }
+    // if (minutes < 10) {
+    //     minutes = "0" + minutes;
+    // }
+    // if (hours < 10) {
+    //     hours = "0" + hours;
+    // }
+    // return hours + ":" + minutes + ":" + seconds;
+    return date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 }
