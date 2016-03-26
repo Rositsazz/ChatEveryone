@@ -89,6 +89,9 @@ a:visited{
 	font-weight: bold;
   font-family: Indie Flower;
   padding-bottom: 5px;
+  width: 100px;
+  float: left;
+  margin-left: 90px;
 }
 
 #signin-username{
