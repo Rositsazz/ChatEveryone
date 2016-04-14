@@ -107,6 +107,13 @@ a:visited{
   color:#7583D0;
 }
 
+#registration-link{
+  float: left;
+  font-family: Indie Flower;
+  color:#7583D0;
+  font-weight: bold;
+  margin: 8px 70px 0px 45px;
+}
 
 .chat-window-container{
 	height: 500px;

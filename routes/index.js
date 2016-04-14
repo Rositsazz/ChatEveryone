@@ -11,7 +11,7 @@ router.get('/chat', function(req, res, next){
 })
 
 router.post('/chat', function(req, res, next) {
-	if (!req.body.username) {
+	if (!(req.body.username && req.body.password)) {
 		res.redirect("/");
 	} else {
 		req.app.locals.users.push(req.body.username);
