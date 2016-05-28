@@ -6,9 +6,17 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/registration', function(req, res, next) {
+  res.render("registration");
+});
+
 router.get('/chat', function(req, res, next){
 	res.redirect("/");
 })
+
+router.get('/chat', function(req, res, next) {
+  res.render("profile.html");
+});
 
 router.post('/chat', function(req, res, next) {
 	if (!(req.body.username && req.body.password)) {

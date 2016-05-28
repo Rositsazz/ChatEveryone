@@ -8,8 +8,21 @@
     <script src="/javascripts/sockets.js"></script>
 </head>
 <body>
-    <div class="chat" >
+    <div id="horizontal-nav">
         <h3>Welcome, <%= username %></h3>
+      <div id="buttons-bar">
+          <a href="profile.html">
+              <input class="buttons" type="button" value="Profile" name="profile">
+          </a>
+          <a href="history.html">
+              <input class="buttons" type="button" value="History" name="history">
+          </a>
+          <a href="group_chat.html">          
+        <input class="buttons" type="button" value="Group Chat" name="group chat">
+          </a>
+      </div>
+    </div>
+    <div class="chat" >
         <div class="chat-window-container">
             <div class="chat-background">
             </div>
@@ -27,6 +40,7 @@
                 <div>D</div>
             </button>
         </div>
+
     </div>
     <script>
         window.username = "<%= username %>";
