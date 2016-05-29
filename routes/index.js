@@ -14,8 +14,17 @@ router.get('/chat', function(req, res, next){
 	res.redirect("/");
 })
 
-router.get('/chat', function(req, res, next) {
-  res.render("profile.html");
+router.get('/profile', function(req, res, next) {
+    console.log(req.app.locals.users);
+    res.render("profile", {username: req.app.locals.users});
+});
+
+router.get("/history", function(req, res, next) {
+    res.render("history")
+});
+
+router.get("/group-chat", function(req, res, next) {
+    res.render("group_chat")
 });
 
 router.post('/chat', function(req, res, next) {

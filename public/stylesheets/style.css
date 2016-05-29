@@ -75,10 +75,22 @@ a:visited{
     margin-right: 20px;
 }
 @media screen and (max-width: 768px) {
-	.signin-input h1{
+	.signin-input h1, .registration-input h1, .profile-input h1{
 		font-size:20px;
 	}
 }
+
+.profile-input h1{
+	font-size: 40px;
+    font-family: Indie Flower;
+	color:#7583D0;
+    text-align: left;
+	border-bottom:1px solid #7583D0;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 
 .signin-input input{
 	padding:10px 15px;
@@ -113,6 +125,12 @@ a:visited{
 	text-align: center;
 }
 
+.profile-input{
+    height: 100%;
+}
+
+
+
 .registration-input input{
 	padding:10px 15px;
     width: 50%;
@@ -132,17 +150,85 @@ a:visited{
   margin-left: 160px;
 }
 
+.signin-input button {
+    padding:10px 15px;
+    margin-left: 40px;
+	border-radius:5px;
+	border:1px solid #7583D0;
+
+    background-color:#7583D0;
+    color:white;
+    font-weight: bold;
+    font-family: Indie Flower;
+    padding-bottom: 5px;
+    width: 100px;
+    float: left;
+}
+
 .buttons{
     background-color:#7583D0;
     color:white;
     font-size: 14px;
     border-radius: 5px;
-    border-color: 1px solid #7583D0;
+    border-color:#7583D0;
     font-weight: bold;
     font-family: Indie Flower;
     padding: 5px 0px 5px 0px;
     margin: 3px;
     width: 80px;
+}
+
+.profile-container{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    height: 600px;
+    position: relative;
+}
+
+#profile-photo-holder{
+    float: left;
+}
+
+#change-profile-data{
+    margin-left: 100px;
+    margin-top: 38px;
+    float: left;
+}
+
+#profile-info-holder{
+    float:left;
+    margin-left: 50px;
+}
+
+#profile-photo-holder p{
+    font-family: Indie Flower;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    color:#7583D0;
+}
+
+#profile-info{
+    text-align: center;
+    font-family: Indie Flower;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    color:#7583D0;
+    font-size: 24px;
+}
+
+#change-city{
+    float: left;
+}
+
+.profile-info-p {
+    font-family: Indie Flower;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    font-size: 18px;
+
 }
 
 #buttons-bar {
@@ -258,6 +344,16 @@ a:visited{
 #chat-window{
 	padding:10px;
 }
+
+#user-photo{
+    height: 150px;
+    width: 220px;
+    border: 2px solid;
+    color: #7583D0;
+    float: left;
+    margin-left: 20px;
+}
+
 
 .chat{
 	margin-left:auto;

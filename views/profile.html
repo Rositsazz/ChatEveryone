@@ -9,14 +9,53 @@
     <body>
         <div class="home-background">
         </div>
-        <div class="registration-container">
+        <div class="profile-container">
             <div class="registration-background">
             </div>
-            <div class="registration-input" >
-                <h1>Welcome</h1>
-
+            <div class="profile-input" >
+                <h1>Welcome, <%= username %></h1>
+                <div id="profile-photo-holder">
+                    <p><b>Profile Photo</b></p>
+                    <img id="user-photo" alt="user-photo" src="/images/rosie.jpg"/>
+                    <form name="frmUpload">
+                        <input class="buttons" type="button" id="change-Photo" value="Change" onclick="document.getElementById('file').click();" />
+                        <input type="file" style="display:none;" id="file" name="file"/>
+                    </form>
+                </div>
+                <div id="profile-info-holder">
+                    <p id="profile-info"><b>Information</b></p>
+                    <p class="profile-info-p">Name: <%= username %></p>
+                    <div id="city">
+                        <div id="city-name">
+                        <p class="profile-info-p">City: Sofia</p>
+                        </div>
+                    </div>
+                    <p class="profile-info-p">Age: 22</p>
+                    <p class="profile-info-p">Phone number: +359 800 000 000</p>
+                    <p class="profile-info-p">e-mail: rosi@mail.com</p>
+                    <input class="buttons" type="button" name="change-user-data" value="Change Info"/>
+                </div>
+                <!-- <div id="change-profile-data">
+                    <div id="change-profile-name">
+                        <input type="text" name="username" placeholder="Username" />
+                    </div>
+                    <div class="profile-info-p" id="change-city">
+                        <label>Change your city:
+                        <input list="cities" name="cities" /></label>
+                        <datalist id="cities">
+                          <option value="Sofia">
+                          <option value="Plovdiv">
+                          <option value="Varna">
+                          <option value="Bourgas">
+                          <option value="Veliko Tyrnovo">
+                          <option value="Pleven">
+                        </datalist>
+                    </div>
+                </div> -->
             </div>
         </div>
-
+        <script>
+            window.username = "<%= username %>";
+        </script>
     </body>
 </html>
